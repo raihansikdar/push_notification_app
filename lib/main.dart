@@ -108,6 +108,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:push_notification_app/push_notification.dart';
+import 'package:push_notification_app/text_component/text_component.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -127,6 +128,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
   }
@@ -147,7 +149,8 @@ class HomePage extends StatelessWidget {
               'It works Raihan Sikdar!',
             );
           },
-          child: const Text("Show Local Notification"),
+         child: TextComponent(text:"Show Local Notification",style: TextStyle(fontSize: 16),),
+
         ),
       ),
     );
