@@ -219,12 +219,12 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     }
     return;
   }
-   if (message.data.isNotEmpty) {
-     await PushNotificationService.showLocalNotification(
-       message.data['title'] ?? 'No Title',
-       message.data['body'] ?? 'No Body',
-     );
-   }
+   // if (message.data.isNotEmpty) {
+   //   await PushNotificationService.showLocalNotification(
+   //     message.data['title'] ?? 'No Title',
+   //     message.data['body'] ?? 'No Body',
+   //   );
+   // }
 }
 
 
